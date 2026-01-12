@@ -1,0 +1,33 @@
+{
+  "name": "the-model-view-controller-mvc",
+  "version": "1.0.0",
+  "description": "\"Model-View-Controller\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chukwutem-emi/The-Model-View-Controller-MVC.git"
+  },
+  "keywords": [
+    "\"Model\"",
+    "\"Views\"",
+    "\"Controller\""
+  ],
+  "author": "Chukwutem Stephen Emi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chukwutem-emi/The-Model-View-Controller-MVC/issues"
+  },
+  "homepage": "https://github.com/chukwutem-emi/The-Model-View-Controller-MVC#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "pug": "^3.0.3"
+  }
+}

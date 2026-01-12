@@ -1,0 +1,24 @@
+extends layouts/main-layout.pug
+
+
+block content 
+    main
+        //- To output what we have in shop.js
+        if prods.length > 0
+            each product in prods 
+                h1 My Product 
+                p List of all the products...
+                p #{product.title}
+                div.grid
+                    article.card product-item
+                        header.card__header
+                            h1.product__title Book
+                        div.card__image
+                            img(src="https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png" alt="A Book")
+                        div.card__content
+                            h2.product__price $19.99
+                            p.product__description A very interesting book about so many even more interesting things!
+                        div.card__actions
+                            button.Add to Cart
+        else 
+            h1 No Products
