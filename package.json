@@ -4,7 +4,8 @@
   "description": "\"Model-View-Controller\"",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",

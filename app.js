@@ -10,23 +10,21 @@ app.set("views", "views");
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: false}));
-const adminData = require("./routes/admin")
+const adminRoutes = require("./routes/admin")
 const shopRoute = require("./routes/shop");
 const path = require("path");
 
 
-const rootDir = require("./util/path")
+const errorController = require("./controllers/404");
 
 
 app.use(express.static(path.join(__dirname, "public")));
 
 // Filtering paths
-app.use("/admin", adminData.routes);
+app.use("/admin", adminRoutes);
 app.use(shopRoute);
 
 // catch all routes
-app.use((req, res, next) => {
-    res.status(404).render("404", {pageTitle : "Page Not Found!"});
-})
+app.use(errorController.errorPage);
 
 app.listen(3000);
